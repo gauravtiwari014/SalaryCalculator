@@ -1,0 +1,29 @@
+public class SalaryCalculator {
+
+	String empName;
+	double empSalary;
+	double basic,hra,cca,dedn;
+	double grossSalary;
+	double nettSalary;
+	
+	public void calculateSalary(String empName,double basic,double hra,double cca)
+	{
+		grossSalary = basic + hra + cca;
+		System.out.println("The Gross Salary is "+grossSalary);
+	}
+	
+	public void calculateSalary(String empName,double basic,double hra,double cca,double dedn)
+	{
+		nettSalary = (basic + hra + cca)-dedn;
+		System.out.println("The Nett Salary is "+nettSalary);
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SalaryCalculator sal = new SalaryCalculator();
+		sal.calculateSalary("Harsha", 2000, 245, 345);
+		sal.calculateSalary("Harsha", 2000, 245, 345, 150);
+
+	}
+
+}
+
